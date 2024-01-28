@@ -2,13 +2,21 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import questions from "../data.js";
 import styling from "./Question.module.css";
+import useSound from "use-sound";
+import bell from "..//assets/invite-the-bell.mp3";
 
 const Question = () => {
     const [currentQuestion, setCurrentQuestion] = useState(0);
+    const [bellRang, setBellRang] = useState(false);
+    const [play] = useSound(bell);
 
     const handleClick = (value) => {
-        console.log(value);
         setCurrentQuestion(value);
+
+        if (bellRang === false) {
+            play();
+            setBellRang(true);
+        }
     };
 
     return (
