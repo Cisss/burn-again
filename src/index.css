@@ -30,7 +30,8 @@ h1, .bold {
 .button {
     display: block;
     width: fit-content;
-    min-width: 500px;
+    width: 500px;
+    max-width: 100%;
     padding: 10px;
     margin: 10px auto;
     color: #111;
@@ -47,8 +48,8 @@ h1, .bold {
 }
 
 .back {
-    min-width: 100px !important;
-    margin: 0 !important;
+    width: 100px !important;
+    margin: 10px !important;
     background-color: #ff0000 !important;
     color: #fff !important;
 }
